@@ -13,9 +13,12 @@
 #Se importa biblioteca OpenCV
 import cv2
 
+#Importar archivo para contar archivos
+import listar_capturas
+
 #Variables
 text = 'Color detectado'
-i = 0
+i = listar_capturas.listar() # asigna valor a variable i según las imágenes captura_objeto.jpg encontradas en la carpeta
 
 #Extensión en python para trabajar con matrices, vectores, etc
 import numpy as np #alias np
