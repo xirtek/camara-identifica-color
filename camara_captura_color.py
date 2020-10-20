@@ -57,8 +57,7 @@ while(True):
         else:
             foto = ('captura_objeto'+str(i)+'.jpg')
         cv2.imwrite(foto, frame) #guarda una captura del objeto detectado
-        i+=1
-
+        
 # Para terminar con proceso al apretar escape
 cam.release()
 cv2.destroyAllWindows()
