@@ -16,9 +16,8 @@ import cv2
 #Importar archivo para contar archivos
 import listar_capturas
 
-#Variables
+#Variable
 text = 'Color detectado'
-i = listar_capturas.listar() # asigna valor a variable i según las imágenes captura_objeto.jpg encontradas en la carpeta
 
 #Extensión en python para trabajar con matrices, vectores, etc
 import numpy as np #alias np
@@ -29,6 +28,10 @@ kernel = np.ones((5,5),np.uint8)
 #ciclo infinito para lectura de imagen
 while(True):
     ret,frame = cam.read() #ret:detecta si se está recibiendo o no imagen (true,false)  frame:imagen leia en frames
+    
+    # asigna valor a variable i según las imágenes captura_objeto.jpg encontradas a tiempo real en la carpeta.
+    # en caso de borrar archivos, editar números va actualizando su número al último creado
+    i = listar_capturas.listar()
 
     #rango valores para detectar objeto
     rangomax = np.array([50,255,50])# RGB: color verde
