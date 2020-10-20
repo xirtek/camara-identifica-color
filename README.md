@@ -20,7 +20,7 @@ También tiene la funcionalidad de guardar n cantidad de screenshots de manera m
   ```
   pip install opencv-contrib-python
   ```
-- Para probar código: utilizar el idle que viene por defecto junto a python y correr el archivo **camara_captura_color.py** y tener webcam activada (en caso contrario usar la aplicación DroidCamApp en escritorio y smartphone a la vez).
+- Para probar código: utilizar el idle que viene por defecto junto a python, correr el archivo **camara_captura_color.py** y tener webcam activada (en caso contrario usar la aplicación DroidCamApp en escritorio y smartphone a la vez).
 
 ## Instrucciones de uso (teclas)
 - **s:** sacar captura
