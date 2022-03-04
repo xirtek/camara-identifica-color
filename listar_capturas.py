@@ -1,36 +1,16 @@
 # se obtiene el número de última captura realizada y lo retorna a camara_captura_color.py
-# funciona para capturas entre 0 - 999
+# funciona para capturas entre 0 - n 
 
 import glob
 
 #función retorna valor que tendrá la nueva captura
 def listar():
 
-    a,b,c,d = 0,0,0,0
-
-    #contar captura_objeto100 al captura_objeto999
-    for name in sorted(glob.glob('captura_objeto???.jpg')):
-        d+=1
-    #contar captura_objeto10 al captura_objeto99
-    for name in sorted(glob.glob('captura_objeto??.jpg')):
-        c+=1
-    #contar captura_objeto1 al captura_objeto9
-    for name in sorted(glob.glob('captura_objeto?.jpg')):
-        b+=1
-    #contar captura_objeto
-    for name in sorted(glob.glob('captura_objeto.jpg')):
-        a+=1
-
-    if d > 0:
-        final = obtener_numero_final('???') + 1
-    elif c > 0:
-        final = obtener_numero_final('??') + 1
-    elif b > 0:
-        final = obtener_numero_final('?') + 1
-    elif a > 0:
-        final = 1
-    else: #no encuentra archivo creado (casos de números > 999 no están contemplados para su existencia)
-        final = 0
+    try:
+        final = obtener_numero_final('*?') + 1
+    except:
+        #si no existe archivo captura_objeto habrá error, pero con el except se sigue trabajando y se le asigna un 0
+        final = 0 
 
     #print(final)
     return final
@@ -59,5 +39,5 @@ def search_number_string(String):
 
 # --------------------------------------------------------------------------------------------------------------
 
-#para probar el script actual quitar comentario de línea 35, 63 y comentar línea 36
+#para probar el script actual, quitar comentario de línea 15, 43 y comentar línea 16
 #listar()
